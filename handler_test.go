@@ -28,7 +28,7 @@ func TestServeMux(t *testing.T) {
 		fmt.Fprint(w, "Welkam Tu Mai Cenel")
 	})
 	mux.HandleFunc("/saskrep", func(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprint(w, "plis saskrep")
+		fmt.Fprint(w, "plis saskrep Mai Cenel")
 	})
 
 	server := http.Server{

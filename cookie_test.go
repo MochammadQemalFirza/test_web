@@ -13,13 +13,13 @@ func SetCookie(w http.ResponseWriter, r *http.Request) {
 	cookie.Path = "/"
 
 	http.SetCookie(w, cookie)
-	fmt.Fprint(w, "Success Create Cookie")
+	fmt.Fprint(w, "Success Creating Cookie")
 }
 
 func GetCookie(w http.ResponseWriter, r *http.Request) {
 	cookie, err := r.Cookie("Qemsky")
 	if err != nil {
-		fmt.Fprint(w, "No Cookie")
+		fmt.Fprint(w, "You Have No Cookie")
 	} else {
 		name := cookie.Value
 		fmt.Fprintf(w, "Hello %s", name)

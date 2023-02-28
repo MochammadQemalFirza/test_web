@@ -8,7 +8,7 @@ import (
 
 func SetCookie(w http.ResponseWriter, r *http.Request) {
 	cookie := new(http.Cookie)
-	cookie.Name = "Qemsky"
+	cookie.Name = "Qemsky17"
 	cookie.Value = r.URL.Query().Get("name")
 	cookie.Path = "/"
 
@@ -17,9 +17,9 @@ func SetCookie(w http.ResponseWriter, r *http.Request) {
 }
 
 func GetCookie(w http.ResponseWriter, r *http.Request) {
-	cookie, err := r.Cookie("Qemsky")
+	cookie, err := r.Cookie("Qemsky17")
 	if err != nil {
-		fmt.Fprint(w, "You Have No Cookie")
+		fmt.Fprint(w, "You Have No Cookie, please set one")
 	} else {
 		name := cookie.Value
 		fmt.Fprintf(w, "Hello %s", name)
